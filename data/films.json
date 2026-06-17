@@ -4,13 +4,43 @@
       "title": "A Tela",
       "poster": "/assets/uploads/atela_impressão_comprimido.png",
       "slate": "Curta-metragem / 2025",
-      "status": "Em Distribuição"
+      "status": "Em Distribuição",
+      "synopsis": "",
+      "ficha": [
+        {
+          "funcao": "Direção e Roteiro",
+          "nome": "Gabriel Newton"
+        },
+        {
+          "funcao": "Produção Executiva",
+          "nome": "Wilma Morais e Nivia Neves"
+        }
+      ],
+      "festivais": [
+        {
+          "nome": "Goiânia Mostra Curtas",
+          "info": "Prêmio de Melhor Direção"
+        },
+        {
+          "nome": "7 Festival Pedra Azul",
+          "info": ""
+        }
+      ],
+      "gallery": [
+        "/assets/uploads/_MG_3499.jpg",
+        "/assets/uploads/_MG_3349.jpg",
+        "/assets/uploads/_MG_5391.jpg",
+        "/assets/uploads/_MG_5428.jpg",
+        "/assets/uploads/_MG_5684.jpg"
+      ],
+      "trailer": "https://youtu.be/YymuFxtRrfI?si=c06e8MiCoRFDsj0w"
     },
     {
       "title": "Sal a Gosto",
       "poster": "/assets/uploads/Cartaz Feed Instagram.png",
       "slate": "Série de Ficção - 10 episódios",
-      "status": "Em Exibição (TV Brasil/TV UFG)"
+      "status": "Em Exibição (TV Brasil/TV UFG)",
+      "synopsis": ""
     },
     {
       "title": "Dias de Luta",
