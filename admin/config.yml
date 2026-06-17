@@ -9,7 +9,7 @@ backend:
   name: github
   repo: Estratosfilmes/Estratosfilmes-site     
   branch: main
-  base_url: base_url: https://sveltia-cms-auth.contato-3aa.workers.dev  
+  base_url: https://sveltia-cms-auth.contato-3aa.workers.dev  
 
 # Pasta onde os arquivos enviados (cartazes, fotos, logo) ficam guardados:
 media_folder: "assets/uploads"
