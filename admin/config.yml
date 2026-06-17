@@ -7,9 +7,9 @@
 
 backend:
   name: github
-  repo: SEU-USUARIO/estratosfilmes-site      # <<< TROCAR pelo seu usuário/repositório do GitHub
+  repo: Estratosfilmes/Estratosfilmes-site     
   branch: main
-  base_url: https://COLE-A-URL-DO-SEU-WORKER.workers.dev   # <<< TROCAR pela URL do worker de login
+  base_url: base_url: https://sveltia-cms-auth.contato-3aa.workers.dev  
 
 # Pasta onde os arquivos enviados (cartazes, fotos, logo) ficam guardados:
 media_folder: "assets/uploads"
