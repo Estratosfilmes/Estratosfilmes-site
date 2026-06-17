@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>estratosfilmes — produtora audiovisual · Goiânia, GO</title>
+<meta name="description" content="Produtora audiovisual em Goiânia, Goiás. Ficção e documentário, do roteiro à pós-produção.">
+<meta property="og:title" content="estratosfilmes — produtora audiovisual">
+<meta property="og:description" content="Cinema feito no interior do Brasil. Goiânia, Goiás.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/uploads/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#05111A;       /* fundo: azul-petróleo profundo, quase preto */
+    --ink-2:#0A1B25;     /* superfície */
+    --ink-3:#122C37;     /* bordas / relevo */
+    --petrol:#124F6E;    /* azul da marca — cor principal */
+    --cyan:#5491A9;      /* destaque sóbrio, parente contido do petrol */
+    --paper:#E2EAEE;     /* texto */
+    --mist:#7B94A0;      /* texto secundário, azul-acinzentado */
+    --maxw:1200px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--paper);font-family:'Hanken Grotesk',sans-serif;font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--petrol);color:var(--paper)}
+  :focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:2px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 30px}
+  .mono{font-family:'Space Mono',monospace;letter-spacing:.04em}
+  .eyebrow{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--cyan)}
+
+  .mark{width:26px;height:26px;color:var(--cyan);flex:none}
+  .wordmark{display:inline-flex;align-items:center;gap:11px;font-weight:500;letter-spacing:.01em;font-size:1.12rem}
+  .wordmark img{height:30px;width:auto;display:block}
+
+  nav{position:sticky;top:0;z-index:100;background:rgba(5,17,26,.74);backdrop-filter:blur(12px);border-bottom:1px solid var(--ink-3)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .nav-links{display:flex;align-items:center;gap:34px}
+  .nav-links a{font-size:.82rem;letter-spacing:.05em;color:var(--mist);transition:color .25s}
+  .nav-links a:hover{color:var(--paper)}
+  .nav-cta{font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.06em;color:var(--cyan);border:1px solid var(--ink-3);padding:8px 14px;border-radius:100px;transition:border-color .25s,color .25s}
+  .nav-cta:hover{border-color:var(--cyan);color:var(--paper)}
+
+  .hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden}
+  .hero-mark{position:absolute;right:-14%;top:50%;transform:translateY(-50%);width:min(82vh,860px);color:var(--petrol);opacity:.13;z-index:0}
+  .hero .wrap{position:relative;z-index:1;width:100%}
+  .hero h1{font-weight:300;font-size:clamp(2.7rem,7.6vw,6rem);line-height:1.0;letter-spacing:-.02em;margin:24px 0 26px;max-width:15ch}
+  .hero p.lede{font-size:clamp(1.05rem,2.3vw,1.3rem);color:var(--mist);max-width:44ch;font-weight:300}
+  .hero .place{margin-top:46px;font-size:.72rem;letter-spacing:.26em;color:var(--mist)}
+  .hero .place i{color:var(--cyan);font-style:normal}
+
+  .rise{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+  .rise.in{opacity:1;transform:none}
+  .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.32s}
+
+  .section{padding:136px 0 24px;border-top:1px solid var(--ink-3)}
+  .sec-head{display:flex;align-items:baseline;gap:20px;margin-bottom:68px;flex-wrap:wrap}
+  .sec-head h2{font-weight:300;font-size:clamp(1.7rem,4vw,2.6rem);letter-spacing:-.01em}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:52px 38px}
+  .film{display:block}
+  .poster{position:relative;aspect-ratio:2/3;border-radius:4px;overflow:hidden;border:1px solid var(--ink-3);background:linear-gradient(160deg,var(--ink-2),#091620);transition:transform .45s cubic-bezier(.2,.7,.2,1),border-color .45s}
+  .poster::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 70% 18%,rgba(84,145,169,.10),transparent 54%)}
+  .poster img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+  .poster .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--ink-3)}
+  .poster .ph svg{width:54%;opacity:.5}
+  .film:hover .poster{transform:translateY(-6px);border-color:var(--petrol)}
+  .meta{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:16px}
+  .meta h3{font-weight:400;font-size:1.18rem}
+  .meta .slate{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.06em;color:var(--mist);text-align:right;white-space:nowrap}
+  .status{display:inline-block;margin-top:7px;font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan)}
+
+  .about{display:grid;grid-template-columns:1fr 1.25fr;gap:76px;align-items:start}
+  .about .big{font-weight:300;font-size:clamp(1.5rem,3.2vw,2.05rem);line-height:1.28}
+  .about .big b{font-weight:500;color:var(--cyan)}
+  .about .col p{color:var(--mist);margin-bottom:18px}
+
+  .pf{display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap;background:var(--ink-2);border:1px solid var(--ink-3);border-radius:6px;padding:46px 48px;margin-top:8px}
+  .pf h3{font-weight:300;font-size:clamp(1.5rem,3.4vw,2.1rem);margin-bottom:8px}
+  .pf p{color:var(--mist);max-width:42ch}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:'Space Mono',monospace;font-size:.78rem;letter-spacing:.05em;background:var(--petrol);color:var(--paper);padding:15px 26px;border-radius:100px;transition:background .25s,transform .25s;white-space:nowrap}
+  .btn:hover{background:var(--cyan);color:var(--ink);transform:translateY(-2px)}
+
+  .contact{display:flex;justify-content:space-between;gap:48px;flex-wrap:wrap;align-items:flex-end}
+  .contact .mail{font-weight:300;font-size:clamp(1.5rem,4.6vw,2.6rem);border-bottom:1px solid var(--ink-3);padding-bottom:8px;transition:border-color .3s}
+  .contact .mail:hover{border-color:var(--cyan)}
+  .contact .meta2{font-family:'Space Mono',monospace;font-size:.78rem;letter-spacing:.04em;color:var(--mist);line-height:2.1;text-align:right}
+  .contact .meta2 a:hover{color:var(--paper)}
+
+  footer{border-top:1px solid var(--ink-3);margin-top:128px;padding:40px 0 72px}
+  .foot-in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.05em;color:var(--mist)}
+
+  @media(max-width:860px){.grid{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr;gap:28px}}
+  @media(max-width:680px){.nav-links{display:none}.hero-mark{right:-30%;opacity:.1}.pf{flex-direction:column;align-items:flex-start;padding:34px}.contact .meta2{text-align:left}}
+  @media(prefers-reduced-motion:reduce){.rise{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mark" viewBox="0 0 220 220">
+    <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round">
+      <polygon points="214.0,110.0 58.0,200.1 58.0,19.9"/>
+      <polygon points="205.0,110.0 62.5,192.3 62.5,27.7"/>
+      <polygon points="196.0,110.0 67.0,184.5 67.0,35.5"/>
+      <polygon points="187.0,110.0 71.5,176.7 71.5,43.3"/>
+      <polygon points="178.0,110.0 76.0,168.9 76.0,51.1"/>
+      <polygon points="169.0,110.0 80.5,161.1 80.5,58.9"/>
+      <polygon points="160.0,110.0 85.0,153.3 85.0,66.7"/>
+      <polygon points="151.0,110.0 89.5,145.5 89.5,74.5"/>
+      <polygon points="142.0,110.0 94.0,137.7 94.0,82.3"/>
+      <polygon points="133.0,110.0 98.5,129.9 98.5,90.1"/>
+      <polygon points="124.0,110.0 103.0,122.1 103.0,97.9"/>
+    </g>
+    <circle cx="110" cy="110" r="4.5" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="wordmark" id="brand" href="#"></a>
+    <div class="nav-links">
+      <a href="#obras">obras</a>
+      <a href="#sobre">sobre</a>
+      <a href="#trabalhe">trabalhe conosco</a>
+      <a class="nav-cta" href="#contato">contato</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <svg class="hero-mark"><use href="#mark"/></svg>
+  <div class="wrap">
+    <p class="eyebrow rise in">Produtora audiovisual</p>
+    <h1 class="rise in d1" id="htag">Toda história tem camadas.</h1>
+    <p class="lede rise in d2" id="hlede">Cinema feito no interior do Brasil. Ficção e documentário, do roteiro à pós-produção, com raiz em Goiás.</p>
+    <p class="place mono rise in d3"><i>●</i>&nbsp;&nbsp;GOIÂNIA · GOIÁS · BRASIL</p>
+  </div>
+</header>
+
+<main>
+  <section class="section" id="obras">
+    <div class="wrap">
+      <div class="sec-head rise"><span class="eyebrow">01 — Obras</span><h2>O que a gente filma</h2></div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sobre">
+    <div class="wrap">
+      <div class="sec-head rise"><span class="eyebrow">02 — Sobre</span><h2>estratosfilmes</h2></div>
+      <div class="about">
+        <p class="big rise">Uma produtora de Goiânia que acredita que as histórias do <b>interior</b> merecem a tela grande.</p>
+        <div class="col rise d1">
+          <p>Trabalhamos em ficção e documentário, do roteiro à pós-produção, com raiz firme em Goiás e olhar aberto para o mundo. Cada projeto é construído em camadas — pesquisa, escrita, set, montagem — até virar filme.</p>
+          <p>Atuamos dentro do ecossistema de fomento à cultura brasileira, articulando recursos públicos e parcerias para que cada obra encontre seu caminho até o público.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="trabalhe">
+    <div class="wrap">
+      <div class="pf rise">
+        <div>
+          <h3>Baixe nosso portfólio</h3>
+          <p>Conheça nossos trabalhos, conquistas e o caminho percorrido até aqui.</p>
+        </div>
+        <a class="btn" href="#" id="pfbtn">↓ Baixar portfólio</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contato">
+    <div class="wrap">
+      <div class="sec-head rise"><span class="eyebrow">03 — Contato</span><h2>Vamos fazer um filme</h2></div>
+      <div class="contact rise">
+        <a class="mail" id="cmail" href="#">contato@estratosfilmes.com</a>
+        <div class="meta2" id="cmeta"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <span>© 2026 ESTRATOSFILMES · PRODUÇÕES AUDIOVISUAIS</span>
+    <span>FOMENTO À CULTURA · LEI PAULO GUSTAVO · LEI GOYAZES · PNAB</span>
+  </div>
+</footer>
+
+<script>
+  /* ====== dados de exemplo (usados se a ficha ainda não existir) ====== */
+  const SEED_SITE = {
+    logo:"", tagline:"Toda história tem camadas.",
+    lede:"Cinema feito no interior do Brasil. Ficção e documentário, do roteiro à pós-produção, com raiz em Goiás.",
+    email:"contato@estratosfilmes.com", phone:"(62) 98641-9141",
+    whatsapp:"https://wa.me/5562991560999",
+    instagram:"#", youtube:"#", vimeo:"#", linkedin:"#", portfolio:"#"
+  };
+  const SEED_FILMS = { items:[
+    {title:"Estrelinha", poster:"", slate:"CURTA · DIR. GABRIEL NEWTON", status:""},
+    {title:"Quando Você Está Aqui", poster:"", slate:"CURTA", status:""},
+    {title:"A Tela", poster:"", slate:"CURTA", status:""},
+    {title:"Sal a Gosto", poster:"", slate:"CURTA", status:""},
+    {title:"Luzes na Janela", poster:"", slate:"LONGA · 2025", status:"Em pós-produção"},
+    {title:"Famigerada", poster:"", slate:"LONGA", status:"Em desenvolvimento"}
+  ]};
+
+  const MARK = '<span class="ph"><svg><use href="#mark"/></svg></span>';
+  const esc = s => (s||"").replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+  function renderBrand(s){
+    const el = document.getElementById('brand');
+    el.innerHTML = s.logo
+      ? `<img src="${esc(s.logo)}" alt="estratosfilmes">`
+      : `<svg class="mark"><use href="#mark"/></svg><b>estratosfilmes</b>`;
+  }
+  function renderHero(s){
+    if(s.tagline) document.getElementById('htag').textContent = s.tagline;
+    if(s.lede) document.getElementById('hlede').textContent = s.lede;
+  }
+  function renderFilms(list){
+    document.getElementById('grid').innerHTML = list.map((f,i)=>`
+      <a class="film rise ${['','d1','d2'][i%3]}" href="#">
+        <div class="poster">${ f.poster ? `<img src="${esc(f.poster)}" alt="${esc(f.title)}">` : MARK }</div>
+        <div class="meta"><h3>${esc(f.title)}</h3>${ f.slate ? `<span class="slate">${esc(f.slate)}</span>`:'' }</div>
+        ${ f.status ? `<span class="status">● ${esc(f.status)}</span>`:'' }
+      </a>`).join('');
+    observeRises();
+  }
+  function renderContact(s){
+    const mail = document.getElementById('cmail');
+    mail.textContent = s.email || SEED_SITE.email;
+    mail.href = "mailto:" + (s.email || SEED_SITE.email);
+    const links = [];
+    if(s.phone) links.push(`${esc(s.phone)}${ s.whatsapp ? ` · <a href="${esc(s.whatsapp)}">whatsapp</a>`:''}`);
+    links.push("GOIÂNIA · GOIÁS");
+    const social = [["instagram",s.instagram],["youtube",s.youtube],["vimeo",s.vimeo],["linkedin",s.linkedin]]
+      .filter(x=>x[1] && x[1]!=="#").map(x=>`<a href="${esc(x[1])}">${x[0]}</a>`);
+    if(social.length) links.push(social.join(" · "));
+    document.getElementById('cmeta').innerHTML = links.join("<br>");
+    if(s.portfolio && s.portfolio!=="#") document.getElementById('pfbtn').href = s.portfolio;
+  }
+
+  let _obs;
+  function observeRises(){
+    _obs = _obs || new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');_obs.unobserve(e.target)}})},{threshold:.12});
+    document.querySelectorAll('.rise:not(.in)').forEach(el=>_obs.observe(el));
+  }
+
+  async function getJSON(path, fallback){
+    try{ const r = await fetch(path,{cache:"no-store"}); if(!r.ok) throw 0; return await r.json(); }
+    catch(e){ return fallback; }
+  }
+  (async ()=>{
+    const site  = await getJSON('data/site.json',  SEED_SITE);
+    const films = await getJSON('data/films.json', SEED_FILMS);
+    renderBrand(site); renderHero(site); renderContact(site);
+    renderFilms((films.items||SEED_FILMS.items));
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+###############################################################################
+#  PAINEL estratosfilmes — configuração do Sveltia CMS
+#
+#  >>> ANTES DE PUBLICAR, troque as 2 linhas marcadas com  <<< TROCAR  abaixo.
+#  (O guia de publicação explica exatamente o que colocar.)
+###############################################################################
+
+backend:
+  name: github
+  repo: SEU-USUARIO/estratosfilmes-site      # <<< TROCAR pelo seu usuário/repositório do GitHub
+  branch: main
+  base_url: https://COLE-A-URL-DO-SEU-WORKER.workers.dev   # <<< TROCAR pela URL do worker de login
+
+# Pasta onde os arquivos enviados (cartazes, fotos, logo) ficam guardados:
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+# Idioma do painel
+locale: pt
+
+collections:
+  # ---------------------------------------------------------------------------
+  - name: identidade
+    label: "Identidade e contato"
+    delete: false
+    files:
+      - name: site
+        label: "Logo, frases e contatos"
+        file: "data/site.json"
+        fields:
+          - { name: logo, label: "Logo (PNG com fundo transparente)", widget: image, required: false }
+          - { name: tagline, label: "Frase principal (topo do site)", widget: string }
+          - { name: lede, label: "Subtítulo (abaixo da frase)", widget: text }
+          - { name: email, label: "E-mail", widget: string }
+          - { name: phone, label: "Telefone", widget: string }
+          - { name: whatsapp, label: "Link do WhatsApp", widget: string, required: false, hint: "Ex.: https://wa.me/5562991560999" }
+          - { name: instagram, label: "Link do Instagram", widget: string, required: false }
+          - { name: youtube, label: "Link do YouTube", widget: string, required: false }
+          - { name: vimeo, label: "Link do Vimeo", widget: string, required: false }
+          - { name: linkedin, label: "Link do LinkedIn", widget: string, required: false }
+          - { name: portfolio, label: "Link do PDF do portfólio", widget: string, required: false }
+
+  # ---------------------------------------------------------------------------
+  - name: filmes
+    label: "Filmes"
+    delete: false
+    files:
+      - name: lista
+        label: "Lista de filmes"
+        file: "data/films.json"
+        fields:
+          - name: items
+            label: "Filmes"
+            label_singular: "Filme"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: "Título", widget: string }
+              - { name: poster, label: "Cartaz (vertical, proporção 2:3)", widget: image, required: false }
+              - { name: slate, label: "Formato e ano", widget: string, required: false, hint: "Ex.: LONGA · 2025" }
+              - { name: status, label: "Status", widget: string, required: false, hint: "Ex.: Em pós-produção (deixe vazio se já lançado)" }
