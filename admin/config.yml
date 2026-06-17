@@ -1,21 +1,16 @@
 ###############################################################################
 #  PAINEL estratosfilmes — configuração do Sveltia CMS
-#
-#  >>> ANTES DE PUBLICAR, troque as 2 linhas marcadas com  <<< TROCAR  abaixo.
-#  (O guia de publicação explica exatamente o que colocar.)
 ###############################################################################
 
 backend:
   name: github
-  repo: Estratosfilmes/Estratosfilmes-site     
+  repo: Estratosfilmes/Estratosfilmes-site
   branch: main
-  base_url: https://sveltia-cms-auth.contato-3aa.workers.dev  
+  base_url: https://sveltia-cms-auth.contato-3aa.workers.dev
 
-# Pasta onde os arquivos enviados (cartazes, fotos, logo) ficam guardados:
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
-# Idioma do painel
 locale: pt
 
 collections:
@@ -57,5 +52,31 @@ collections:
             fields:
               - { name: title, label: "Título", widget: string }
               - { name: poster, label: "Cartaz (vertical, proporção 2:3)", widget: image, required: false }
-              - { name: slate, label: "Formato e ano", widget: string, required: false, hint: "Ex.: LONGA · 2025" }
-              - { name: status, label: "Status", widget: string, required: false, hint: "Ex.: Em pós-produção (deixe vazio se já lançado)" }
+              - { name: slate, label: "Formato e ano", widget: string, required: false, hint: "Ex.: Curta-metragem / 2025" }
+              - { name: status, label: "Status", widget: string, required: false, hint: "Ex.: Em distribuição (deixe vazio se quiser)" }
+              - { name: synopsis, label: "Sinopse", widget: text, required: false }
+              - name: ficha
+                label: "Ficha técnica"
+                label_singular: "Item"
+                widget: list
+                required: false
+                summary: "{{fields.funcao}}: {{fields.nome}}"
+                fields:
+                  - { name: funcao, label: "Função", widget: string, hint: "Ex.: Direção, Roteiro, Fotografia" }
+                  - { name: nome, label: "Nome", widget: string }
+              - name: festivais
+                label: "Festivais e prêmios"
+                label_singular: "Festival / prêmio"
+                widget: list
+                required: false
+                summary: "{{fields.nome}}"
+                fields:
+                  - { name: nome, label: "Festival ou prêmio", widget: string }
+                  - { name: info, label: "Detalhe", widget: string, required: false, hint: "Ex.: Seleção oficial 2025 / Melhor curta" }
+              - name: gallery
+                label: "Galeria de fotos"
+                label_singular: "Foto"
+                widget: list
+                required: false
+                field: { name: image, label: "Foto", widget: image }
+              - { name: trailer, label: "Link do trailer", widget: string, required: false, hint: "Ex.: link do YouTube ou Vimeo" }
