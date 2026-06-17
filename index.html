@@ -14,14 +14,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#05111A;       /* fundo: azul-petróleo profundo, quase preto */
-    --ink-2:#0A1B25;     /* superfície */
-    --ink-3:#122C37;     /* bordas / relevo */
-    --petrol:#124F6E;    /* azul da marca — cor principal */
-    --cyan:#5491A9;      /* destaque sóbrio, parente contido do petrol */
-    --paper:#E2EAEE;     /* texto */
-    --mist:#7B94A0;      /* texto secundário, azul-acinzentado */
-    --maxw:1200px;
+    --ink:#05111A;--ink-2:#0A1B25;--ink-3:#122C37;--petrol:#124F6E;
+    --cyan:#5491A9;--paper:#E2EAEE;--mist:#7B94A0;--maxw:1200px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -35,18 +29,17 @@
 
   .mark{width:26px;height:26px;color:var(--cyan);flex:none}
   .wordmark{display:inline-flex;align-items:center;gap:11px;font-weight:500;letter-spacing:.01em;font-size:1.12rem}
-  .wordmark img{height:30px;width:auto;display:block}
+  .wordmark img{height:50px;width:auto;display:block}
 
   nav{position:sticky;top:0;z-index:100;background:rgba(5,17,26,.74);backdrop-filter:blur(12px);border-bottom:1px solid var(--ink-3)}
-  .nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:84px}
   .nav-links{display:flex;align-items:center;gap:34px}
   .nav-links a{font-size:.82rem;letter-spacing:.05em;color:var(--mist);transition:color .25s}
   .nav-links a:hover{color:var(--paper)}
   .nav-cta{font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.06em;color:var(--cyan);border:1px solid var(--ink-3);padding:8px 14px;border-radius:100px;transition:border-color .25s,color .25s}
   .nav-cta:hover{border-color:var(--cyan);color:var(--paper)}
 
-  .hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden}
-  .hero-mark{position:absolute;right:-14%;top:50%;transform:translateY(-50%);width:min(82vh,860px);color:var(--petrol);opacity:.13;z-index:0}
+  .hero{position:relative;min-height:82vh;display:flex;align-items:center;overflow:hidden}
   .hero .wrap{position:relative;z-index:1;width:100%}
   .hero h1{font-weight:300;font-size:clamp(2.7rem,7.6vw,6rem);line-height:1.0;letter-spacing:-.02em;margin:24px 0 26px;max-width:15ch}
   .hero p.lede{font-size:clamp(1.05rem,2.3vw,1.3rem);color:var(--mist);max-width:44ch;font-weight:300}
@@ -64,11 +57,13 @@
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:52px 38px}
   .film{display:block}
   .poster{position:relative;aspect-ratio:2/3;border-radius:4px;overflow:hidden;border:1px solid var(--ink-3);background:linear-gradient(160deg,var(--ink-2),#091620);transition:transform .45s cubic-bezier(.2,.7,.2,1),border-color .45s}
-  .poster::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 70% 18%,rgba(84,145,169,.10),transparent 54%)}
+  .poster::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 70% 18%,rgba(84,145,169,.10),transparent 54%);z-index:2;pointer-events:none}
   .poster img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
   .poster .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--ink-3)}
-  .poster .ph svg{width:54%;opacity:.5}
+  .poster .ph svg{width:46%;opacity:.4}
+  .poster .open{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:16px;font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--paper);background:linear-gradient(0deg,rgba(5,17,26,.85),transparent);opacity:0;transform:translateY(6px);transition:opacity .4s,transform .4s}
   .film:hover .poster{transform:translateY(-6px);border-color:var(--petrol)}
+  .film:hover .open{opacity:1;transform:none}
   .meta{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:16px}
   .meta h3{font-weight:400;font-size:1.18rem}
   .meta .slate{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.06em;color:var(--mist);text-align:right;white-space:nowrap}
@@ -95,7 +90,7 @@
   .foot-in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.05em;color:var(--mist)}
 
   @media(max-width:860px){.grid{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr;gap:28px}}
-  @media(max-width:680px){.nav-links{display:none}.hero-mark{right:-30%;opacity:.1}.pf{flex-direction:column;align-items:flex-start;padding:34px}.contact .meta2{text-align:left}}
+  @media(max-width:680px){.nav-links{display:none}.pf{flex-direction:column;align-items:flex-start;padding:34px}.contact .meta2{text-align:left}}
   @media(prefers-reduced-motion:reduce){.rise{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 </style>
 </head>
@@ -104,16 +99,11 @@
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="mark" viewBox="0 0 220 220">
     <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round">
-      <polygon points="214.0,110.0 58.0,200.1 58.0,19.9"/>
-      <polygon points="205.0,110.0 62.5,192.3 62.5,27.7"/>
-      <polygon points="196.0,110.0 67.0,184.5 67.0,35.5"/>
-      <polygon points="187.0,110.0 71.5,176.7 71.5,43.3"/>
-      <polygon points="178.0,110.0 76.0,168.9 76.0,51.1"/>
-      <polygon points="169.0,110.0 80.5,161.1 80.5,58.9"/>
-      <polygon points="160.0,110.0 85.0,153.3 85.0,66.7"/>
-      <polygon points="151.0,110.0 89.5,145.5 89.5,74.5"/>
-      <polygon points="142.0,110.0 94.0,137.7 94.0,82.3"/>
-      <polygon points="133.0,110.0 98.5,129.9 98.5,90.1"/>
+      <polygon points="214.0,110.0 58.0,200.1 58.0,19.9"/><polygon points="205.0,110.0 62.5,192.3 62.5,27.7"/>
+      <polygon points="196.0,110.0 67.0,184.5 67.0,35.5"/><polygon points="187.0,110.0 71.5,176.7 71.5,43.3"/>
+      <polygon points="178.0,110.0 76.0,168.9 76.0,51.1"/><polygon points="169.0,110.0 80.5,161.1 80.5,58.9"/>
+      <polygon points="160.0,110.0 85.0,153.3 85.0,66.7"/><polygon points="151.0,110.0 89.5,145.5 89.5,74.5"/>
+      <polygon points="142.0,110.0 94.0,137.7 94.0,82.3"/><polygon points="133.0,110.0 98.5,129.9 98.5,90.1"/>
       <polygon points="124.0,110.0 103.0,122.1 103.0,97.9"/>
     </g>
     <circle cx="110" cy="110" r="4.5" fill="currentColor"/>
@@ -122,7 +112,7 @@
 
 <nav>
   <div class="wrap nav-in">
-    <a class="wordmark" id="brand" href="#"></a>
+    <a class="wordmark" id="brand" href="index.html"></a>
     <div class="nav-links">
       <a href="#obras">obras</a>
       <a href="#sobre">sobre</a>
@@ -133,7 +123,6 @@
 </nav>
 
 <header class="hero">
-  <svg class="hero-mark"><use href="#mark"/></svg>
   <div class="wrap">
     <p class="eyebrow rise in">Produtora audiovisual</p>
     <h1 class="rise in d1" id="htag">Toda história tem camadas.</h1>
@@ -166,10 +155,7 @@
   <section class="section" id="trabalhe">
     <div class="wrap">
       <div class="pf rise">
-        <div>
-          <h3>Baixe nosso portfólio</h3>
-          <p>Conheça nossos trabalhos, conquistas e o caminho percorrido até aqui.</p>
-        </div>
+        <div><h3>Baixe nosso portfólio</h3><p>Conheça nossos trabalhos, conquistas e o caminho percorrido até aqui.</p></div>
         <a class="btn" href="#" id="pfbtn">↓ Baixar portfólio</a>
       </div>
     </div>
@@ -194,74 +180,50 @@
 </footer>
 
 <script>
-  /* ====== dados de exemplo (usados se a ficha ainda não existir) ====== */
-  const SEED_SITE = {
-    logo:"", tagline:"Toda história tem camadas.",
-    lede:"Cinema feito no interior do Brasil. Ficção e documentário, do roteiro à pós-produção, com raiz em Goiás.",
-    email:"contato@estratosfilmes.com", phone:"(62) 98641-9141",
-    whatsapp:"https://wa.me/5562991560999",
-    instagram:"#", youtube:"#", vimeo:"#", linkedin:"#", portfolio:"#"
-  };
-  const SEED_FILMS = { items:[
-    {title:"Estrelinha", poster:"", slate:"CURTA · DIR. GABRIEL NEWTON", status:""},
-    {title:"Quando Você Está Aqui", poster:"", slate:"CURTA", status:""},
-    {title:"A Tela", poster:"", slate:"CURTA", status:""},
-    {title:"Sal a Gosto", poster:"", slate:"CURTA", status:""},
-    {title:"Luzes na Janela", poster:"", slate:"LONGA · 2025", status:"Em pós-produção"},
-    {title:"Famigerada", poster:"", slate:"LONGA", status:"Em desenvolvimento"}
-  ]};
+  const SEED_SITE = {logo:"",tagline:"Toda história tem camadas.",lede:"Cinema feito no interior do Brasil. Ficção e documentário, do roteiro à pós-produção, com raiz em Goiás.",email:"contato@estratosfilmes.com",phone:"(62) 98641-9141",whatsapp:"https://wa.me/5562991560999",instagram:"",youtube:"",vimeo:"",linkedin:"",portfolio:""};
+  const SEED_FILMS = {items:[]};
 
   const MARK = '<span class="ph"><svg><use href="#mark"/></svg></span>';
   const esc = s => (s||"").replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const slug = s => (s||"").toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
 
   function renderBrand(s){
-    const el = document.getElementById('brand');
-    el.innerHTML = s.logo
+    document.getElementById('brand').innerHTML = s.logo
       ? `<img src="${esc(s.logo)}" alt="estratosfilmes">`
       : `<svg class="mark"><use href="#mark"/></svg><b>estratosfilmes</b>`;
   }
-  function renderHero(s){
-    if(s.tagline) document.getElementById('htag').textContent = s.tagline;
-    if(s.lede) document.getElementById('hlede').textContent = s.lede;
-  }
+  function renderHero(s){ if(s.tagline) htag.textContent=s.tagline; if(s.lede) hlede.textContent=s.lede; }
   function renderFilms(list){
     document.getElementById('grid').innerHTML = list.map((f,i)=>`
-      <a class="film rise ${['','d1','d2'][i%3]}" href="#">
-        <div class="poster">${ f.poster ? `<img src="${esc(f.poster)}" alt="${esc(f.title)}">` : MARK }</div>
+      <a class="film rise ${['','d1','d2'][i%3]}" href="obra.html?f=${slug(f.title)}">
+        <div class="poster">${ f.poster ? `<img src="${esc(f.poster)}" alt="${esc(f.title)}">` : MARK }<span class="open">Ver obra →</span></div>
         <div class="meta"><h3>${esc(f.title)}</h3>${ f.slate ? `<span class="slate">${esc(f.slate)}</span>`:'' }</div>
         ${ f.status ? `<span class="status">● ${esc(f.status)}</span>`:'' }
       </a>`).join('');
     observeRises();
   }
   function renderContact(s){
-    const mail = document.getElementById('cmail');
-    mail.textContent = s.email || SEED_SITE.email;
-    mail.href = "mailto:" + (s.email || SEED_SITE.email);
-    const links = [];
+    const mail=document.getElementById('cmail');
+    mail.textContent=s.email||SEED_SITE.email; mail.href="mailto:"+(s.email||SEED_SITE.email);
+    const links=[];
     if(s.phone) links.push(`${esc(s.phone)}${ s.whatsapp ? ` · <a href="${esc(s.whatsapp)}">whatsapp</a>`:''}`);
     links.push("GOIÂNIA · GOIÁS");
-    const social = [["instagram",s.instagram],["youtube",s.youtube],["vimeo",s.vimeo],["linkedin",s.linkedin]]
-      .filter(x=>x[1] && x[1]!=="#").map(x=>`<a href="${esc(x[1])}">${x[0]}</a>`);
+    const social=[["instagram",s.instagram],["youtube",s.youtube],["vimeo",s.vimeo],["linkedin",s.linkedin]].filter(x=>x[1]&&x[1]!=="#").map(x=>`<a href="${esc(x[1])}">${x[0]}</a>`);
     if(social.length) links.push(social.join(" · "));
-    document.getElementById('cmeta').innerHTML = links.join("<br>");
-    if(s.portfolio && s.portfolio!=="#") document.getElementById('pfbtn').href = s.portfolio;
+    document.getElementById('cmeta').innerHTML=links.join("<br>");
+    if(s.portfolio&&s.portfolio!=="#") document.getElementById('pfbtn').href=s.portfolio;
   }
-
   let _obs;
   function observeRises(){
-    _obs = _obs || new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');_obs.unobserve(e.target)}})},{threshold:.12});
+    _obs=_obs||new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');_obs.unobserve(e.target)}})},{threshold:.12});
     document.querySelectorAll('.rise:not(.in)').forEach(el=>_obs.observe(el));
   }
-
-  async function getJSON(path, fallback){
-    try{ const r = await fetch(path,{cache:"no-store"}); if(!r.ok) throw 0; return await r.json(); }
-    catch(e){ return fallback; }
-  }
-  (async ()=>{
-    const site  = await getJSON('data/site.json',  SEED_SITE);
-    const films = await getJSON('data/films.json', SEED_FILMS);
-    renderBrand(site); renderHero(site); renderContact(site);
-    renderFilms((films.items||SEED_FILMS.items));
+  async function getJSON(p,fb){try{const r=await fetch(p,{cache:"no-store"});if(!r.ok)throw 0;return await r.json();}catch(e){return fb;}}
+  (async()=>{
+    const site=await getJSON('data/site.json',SEED_SITE);
+    const films=await getJSON('data/films.json',SEED_FILMS);
+    renderBrand(site);renderHero(site);renderContact(site);
+    renderFilms((films.items||[]));
   })();
 </script>
 </body>
