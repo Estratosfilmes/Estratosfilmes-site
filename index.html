@@ -13,10 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --ink:#05111A;--ink-2:#0A1B25;--ink-3:#122C37;--petrol:#124F6E;
-    --cyan:#5491A9;--paper:#E2EAEE;--mist:#7B94A0;--maxw:1200px;
-  }
+  :root{--ink:#05111A;--ink-2:#0A1B25;--ink-3:#122C37;--petrol:#124F6E;--cyan:#5491A9;--paper:#E2EAEE;--mist:#7B94A0;--maxw:1200px}
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{background:var(--ink);color:var(--paper);font-family:'Hanken Grotesk',sans-serif;font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -29,20 +26,27 @@
 
   .mark{width:26px;height:26px;color:var(--cyan);flex:none}
   .wordmark{display:inline-flex;align-items:center;gap:11px;font-weight:500;letter-spacing:.01em;font-size:1.12rem}
-  .wordmark img{height:50px;width:auto;display:block}
+  .wordmark img{width:auto;display:block;height:50px}
 
   nav{position:sticky;top:0;z-index:100;background:rgba(5,17,26,.74);backdrop-filter:blur(12px);border-bottom:1px solid var(--ink-3)}
-  .nav-in{display:flex;align-items:center;justify-content:space-between;height:84px}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;min-height:84px;padding:10px 0}
   .nav-links{display:flex;align-items:center;gap:34px}
   .nav-links a{font-size:.82rem;letter-spacing:.05em;color:var(--mist);transition:color .25s}
   .nav-links a:hover{color:var(--paper)}
   .nav-cta{font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.06em;color:var(--cyan);border:1px solid var(--ink-3);padding:8px 14px;border-radius:100px;transition:border-color .25s,color .25s}
   .nav-cta:hover{border-color:var(--cyan);color:var(--paper)}
 
-  .hero{position:relative;min-height:82vh;display:flex;align-items:center;overflow:hidden}
-  .hero .wrap{position:relative;z-index:1;width:100%}
+  .hero{position:relative;min-height:86vh;display:flex;align-items:center;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden;background:var(--ink)}
+  .hero-bg .slide,.hero-bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hero-bg .slide{opacity:0;transition:opacity 1.6s ease}
+  .hero-bg .slide.on{opacity:1}
+  .hero-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(5,17,26,.94),rgba(5,17,26,.74) 42%,rgba(5,17,26,.42) 100%),linear-gradient(0deg,rgba(5,17,26,.72),transparent 55%)}
+  .hero:not(.has-bg) .hero-scrim{display:none}
+  .hero .wrap{position:relative;z-index:2;width:100%}
   .hero h1{font-weight:300;font-size:clamp(2.7rem,7.6vw,6rem);line-height:1.0;letter-spacing:-.02em;margin:24px 0 26px;max-width:15ch}
   .hero p.lede{font-size:clamp(1.05rem,2.3vw,1.3rem);color:var(--mist);max-width:44ch;font-weight:300}
+  .hero.has-bg p.lede{color:#cdd9df}
   .hero .place{margin-top:46px;font-size:.72rem;letter-spacing:.26em;color:var(--mist)}
   .hero .place i{color:var(--cyan);font-style:normal}
 
@@ -114,15 +118,15 @@
   <div class="wrap nav-in">
     <a class="wordmark" id="brand" href="index.html"></a>
     <div class="nav-links">
-      <a href="#obras">obras</a>
-      <a href="#sobre">sobre</a>
-      <a href="#trabalhe">trabalhe conosco</a>
+      <a href="#obras">obras</a><a href="#sobre">sobre</a><a href="#trabalhe">trabalhe conosco</a>
       <a class="nav-cta" href="#contato">contato</a>
     </div>
   </div>
 </nav>
 
-<header class="hero">
+<header class="hero" id="hero">
+  <div class="hero-bg" id="herobg"></div>
+  <div class="hero-scrim"></div>
   <div class="wrap">
     <p class="eyebrow rise in">Produtora audiovisual</p>
     <h1 class="rise in d1" id="htag">Toda história tem camadas.</h1>
@@ -180,21 +184,40 @@
 </footer>
 
 <script>
-  const SEED_SITE = {logo:"",tagline:"Toda história tem camadas.",lede:"Cinema feito no interior do Brasil. Ficção e documentário, do roteiro à pós-produção, com raiz em Goiás.",email:"contato@estratosfilmes.com",phone:"(62) 98641-9141",whatsapp:"https://wa.me/5562991560999",instagram:"",youtube:"",vimeo:"",linkedin:"",portfolio:""};
-  const SEED_FILMS = {items:[]};
-
-  const MARK = '<span class="ph"><svg><use href="#mark"/></svg></span>';
-  const esc = s => (s||"").replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-  const slug = s => (s||"").toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+  const SEED_SITE={logo:"",logo_size:50,hero_mode:"none",hero_images:[],hero_video:"",tagline:"Toda história tem camadas.",lede:"Cinema feito no interior do Brasil. Ficção e documentário, do roteiro à pós-produção, com raiz em Goiás.",email:"contato@estratosfilmes.com",phone:"(62) 98641-9141",whatsapp:"https://wa.me/5562991560999",instagram:"",youtube:"",vimeo:"",linkedin:"",portfolio:""};
+  const SEED_FILMS={items:[]};
+  const MARK='<span class="ph"><svg><use href="#mark"/></svg></span>';
+  const esc=s=>(s||"").replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const slug=s=>(s||"").toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
 
   function renderBrand(s){
-    document.getElementById('brand').innerHTML = s.logo
-      ? `<img src="${esc(s.logo)}" alt="estratosfilmes">`
+    const size=Math.min(Math.max(parseInt(s.logo_size)||50,28),110);
+    document.getElementById('brand').innerHTML=s.logo
+      ? `<img src="${esc(s.logo)}" alt="estratosfilmes" style="height:${size}px">`
       : `<svg class="mark"><use href="#mark"/></svg><b>estratosfilmes</b>`;
   }
   function renderHero(s){ if(s.tagline) htag.textContent=s.tagline; if(s.lede) hlede.textContent=s.lede; }
+  function renderHeroBg(s){
+    const bg=document.getElementById('herobg'), hero=document.getElementById('hero');
+    const imgs=(s.hero_images||[]).filter(Boolean);
+    if(s.hero_mode==='video' && s.hero_video){
+      hero.classList.add('has-bg');
+      if(window.innerWidth>=760){
+        bg.innerHTML=`<video autoplay muted loop playsinline preload="metadata" ${imgs[0]?`poster="${esc(imgs[0])}"`:''}><source src="${esc(s.hero_video)}" type="video/mp4"></video>`;
+      } else if(imgs[0]){ bg.innerHTML=`<img class="slide on" src="${esc(imgs[0])}" alt="">`; }
+      return;
+    }
+    if(s.hero_mode==='slideshow' && imgs.length){
+      hero.classList.add('has-bg');
+      bg.innerHTML=imgs.map((src,i)=>`<img class="slide ${i===0?'on':''}" src="${esc(src)}" alt="" ${i?'loading="lazy"':''}>`).join('');
+      const slides=bg.querySelectorAll('.slide');
+      if(slides.length>1 && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+        let i=0; setInterval(()=>{slides[i].classList.remove('on');i=(i+1)%slides.length;slides[i].classList.add('on');},5000);
+      }
+    }
+  }
   function renderFilms(list){
-    document.getElementById('grid').innerHTML = list.map((f,i)=>`
+    document.getElementById('grid').innerHTML=list.map((f,i)=>`
       <a class="film rise ${['','d1','d2'][i%3]}" href="obra.html?f=${slug(f.title)}">
         <div class="poster">${ f.poster ? `<img src="${esc(f.poster)}" alt="${esc(f.title)}">` : MARK }<span class="open">Ver obra →</span></div>
         <div class="meta"><h3>${esc(f.title)}</h3>${ f.slate ? `<span class="slate">${esc(f.slate)}</span>`:'' }</div>
@@ -222,7 +245,7 @@
   (async()=>{
     const site=await getJSON('data/site.json',SEED_SITE);
     const films=await getJSON('data/films.json',SEED_FILMS);
-    renderBrand(site);renderHero(site);renderContact(site);
+    renderBrand(site);renderHero(site);renderHeroBg(site);renderContact(site);
     renderFilms((films.items||[]));
   })();
 </script>
