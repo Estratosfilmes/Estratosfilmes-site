@@ -20,10 +20,26 @@ collections:
     delete: false
     files:
       - name: site
-        label: "Logo, frases e contatos"
+        label: "Logo, página inicial e contatos"
         file: "data/site.json"
         fields:
           - { name: logo, label: "Logo (PNG com fundo transparente)", widget: image, required: false }
+          - { name: logo_size, label: "Tamanho da logo (altura em pixels)", widget: number, required: false, default: 50, value_type: int, min: 28, max: 110, hint: "Padrão 50. Aumente para deixar a logo maior." }
+          - name: hero_mode
+            label: "Fundo da página inicial"
+            widget: select
+            default: "none"
+            options:
+              - { label: "Fundo escuro (padrão)", value: "none" }
+              - { label: "Slideshow de frames", value: "slideshow" }
+              - { label: "Vídeo de fundo", value: "video" }
+          - name: hero_images
+            label: "Frames da página inicial (para o slideshow)"
+            widget: list
+            required: false
+            field: { name: image, label: "Frame", widget: image }
+            hint: "Imagens largas (horizontais). No modo vídeo, a primeira serve de capa no celular."
+          - { name: hero_video, label: "Vídeo de fundo (.mp4 curto e leve, sem som)", widget: file, required: false }
           - { name: tagline, label: "Frase principal (topo do site)", widget: string }
           - { name: lede, label: "Subtítulo (abaixo da frase)", widget: text }
           - { name: email, label: "E-mail", widget: string }
@@ -55,15 +71,16 @@ collections:
               - { name: slate, label: "Formato e ano", widget: string, required: false, hint: "Ex.: Curta-metragem / 2025" }
               - { name: status, label: "Status", widget: string, required: false, hint: "Ex.: Em distribuição (deixe vazio se quiser)" }
               - { name: synopsis, label: "Sinopse", widget: text, required: false }
-              - name: ficha
-                label: "Ficha técnica"
-                label_singular: "Item"
+              - { name: ficha, label: "Ficha técnica", widget: text, required: false, hint: "Cole o bloco de créditos — uma linha por pessoa, no formato 'Função: Nome'. Ex.:  Direção: Gabriel Newton" }
+              - name: assistir
+                label: "Assistir online (curta ou episódios)"
+                label_singular: "Link"
                 widget: list
                 required: false
-                summary: "{{fields.funcao}}: {{fields.nome}}"
+                summary: "{{fields.titulo}}"
                 fields:
-                  - { name: funcao, label: "Função", widget: string, hint: "Ex.: Direção, Roteiro, Fotografia" }
-                  - { name: nome, label: "Nome", widget: string }
+                  - { name: titulo, label: "Título do link", widget: string, hint: "Ex.: Assistir o curta / Episódio 1" }
+                  - { name: link, label: "Link (YouTube)", widget: string }
               - name: festivais
                 label: "Festivais e prêmios"
                 label_singular: "Festival / prêmio"
