@@ -57,11 +57,24 @@
       "title": "Me Balance Suavemente, Me Balance Agora",
       "poster": "/assets/uploads/Cartaz-Me-Balance-Altissima-resolucao.png",
       "slate": "Curta-metragem / 2018",
-      "status": "",
-      "synopsis": "",
-      "ficha": "",
+      "status": "Em distribuição",
+      "synopsis": "Júlia encontra seu primeiro amor.",
+      "ficha": "Elenco\nJúlia: Shayene Karla\nLaura: Juliana Alburquerque\n\nFicha técnica\nDireção e roteiro: Gabriel Newton\nProdução executiva: Micael Bispo\nDireção de produção: Tamara Benetti\nDireção de fotografia: Antônio H. Queiroz\nDireção de arte: Wilma Morais\nTécnico de som: Guilherme Nogueira\nMontagem: Thomaz Magalhães\nMaquiagem: Ana Simiema\nEdição e mixagem de som: Thaís Oliveira\n1ª assistência de direção: Flávia Ferreira\nContinuísta: Victor Vinícius\nAssistência de produção executiva: Rafael Henrique\nAssistência administrativa da Estratosfilmes: Nivia Neves\nProdução de elenco: Taynara Ferreira\n1ª assistência de produção: Jade Medeiros\n2ª assistência de produção: Milena Ribeiro\n1ª assistência de câmera: Leo Rocha\n2ª assistência de câmera: Matheus Medeiros\n1ª assistência de arte: Taynara Ferreira\n2ª assistência de arte: Thalita Goulart\nMicrofonistas: Elder Patrick e Larissa Fernandes\nMaking of: Rayane Richele\nColor grading: Antônio H. Queiroz\nMaquinista e eletricista-chefe: Tothi Cardoso\nMaquinista e eletricista: Pedrinho Fiel\nAssistência de maquinaria e elétrica: Gleig de Sousa\nIdentidade visual: Gabriel Newton\nPrestação de contas: Cecília Brito\nDistribuição para festivais: Érico José\nCozinha: Edna Benetti, Eduardo Benetti e Thiago Benetti\n\nProdução: Estratosfilmes e Setup Filmes",
       "assistir": [],
-      "festivais": [],
+      "festivais": [
+        {
+          "nome": "10º Lobo Fest",
+          "info": ""
+        },
+        {
+          "nome": "FAVERA 2018 — Festival Audiovisual Vera Cruz",
+          "info": ""
+        },
+        {
+          "nome": "4º DIGO — Festival Internacional da Diversidade Sexual e de Gênero de Goiás",
+          "info": "Melhor Filme Goiano e Melhor Roteiro"
+        }
+      ],
       "gallery": [],
       "trailer": ""
     }
