@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "title": "Famigerada",
+      "poster": "",
+      "slate": "",
+      "status": "",
+      "synopsis": "",
+      "ficha": "",
+      "assistir": [],
+      "festivais": [],
+      "gallery": [],
+      "trailer": ""
+    },
+    {
       "title": "A Tela",
       "poster": "/assets/uploads/atela_impressão_comprimido.png",
       "slate": "Curta-metragem / 2025",
@@ -51,6 +63,13 @@
       "status": "Em distribuição",
       "synopsis": "Um sofá, tapete antigo e sujo, uma estante alta com televisão, alguns livros jogados e uma cortina bege. A sala sem sal de Walter se transforma em uma discoteca quando ele decide que, depois de mais de 40 anos neste planeta, cansou de se sentir sozinho.\n\nÉ lá onde diversas pessoas decidem que, em vez de esperarem o “fim do mundo” apreensivas e temerosas, não seria melhor dançar como se o mundo estivesse acabando?",
       "ficha": "Elenco\nBrisa: Nivia Neves\nOsso: Victor Vinícius\n\nFicha técnica\nDireção e roteiro: Gabriel Newton\nProdução executiva: Micael Bispo\nDireção de produção: Yasmin Lima\nDireção de fotografia: Antônio H. Queiroz\nDireção de arte: Wilma Morais\nTécnica de som: Thaís Oliveira\nMontagem: Thomaz Magalhães\n1ª assistência de direção: Flávia Ferreira\nAssistência de produção executiva: Rafael Henrique\nAssistência administrativa da Estratosfilmes: Nivia Neves\nPrestação de contas: Cecília Brito e Nivia Neves\nProdução de elenco: Taynara Ferreira\nAssistência de produção: Larissa Bueno\nAssistência de câmera: Léo Rocha\nStill: Sidi Leite\nProdução de objetos: Dionatan Barroso\nMaquiagem: Ana Simiema\nAssistência de maquiagem: Mikael Siqueira\nMicrofonista: Thiago Rodrigues\nEdição e mixagem de som: Thaís Oliveira\nColor grading: Antônio H. Queiroz\nFinalização: Thomaz Magalhães\nIdentidade visual: Gabriel Newton\nCaptação de recursos: Arte Brasil Projetos Socioculturais e Other Side Promoções e Eventos\nAssessoria contábil: Zittcon Contabilidade\nAssistência de set: Daniel Lopes\nEquipe NAUFO – UEG: Mikaela Pasa, Hal Widson, Leonardo Calixto, Eduardo Vieira e Michel Campos\nCoordenação NAUFO – UEG: Thaís Oliveira\nCozinheiras: Claudia Valadão, Braisinha Valadão e Leontina Lopes\nMotoristas da van: Willian N. Pereira e Rubens Gomes\nMotorista do caminhão: Otthon Borges\nSegurança: Antônio Jorge Pereira\n\nApoio: Setup Filmes\nPatrocínio: Catral\nDistribuição: Kinoptera",
+      "gallery": [
+        "/assets/uploads/Captura-de-tela-2025-03-13-181951.png",
+        "/assets/uploads/Captura-de-tela-2025-03-13-181358.png",
+        "/assets/uploads/Captura-de-tela-2025-03-13-181215.png",
+        "/assets/uploads/Captura-de-tela-2025-03-13-181103.png",
+        "/assets/uploads/Captura-de-tela-2025-03-13-181215-.png"
+      ],
       "trailer": ""
     },
     {
@@ -59,8 +78,13 @@
       "slate": "Curta-metragem / 2018",
       "status": "Em distribuição",
       "synopsis": "Júlia encontra seu primeiro amor.",
-      "ficha": "Elenco\nJúlia: Shayene Karla\nLaura: Juliana Alburquerque\n\nFicha técnica\nDireção e roteiro: Gabriel Newton\nProdução executiva: Micael Bispo\nDireção de produção: Tamara Benetti\nDireção de fotografia: Antônio H. Queiroz\nDireção de arte: Wilma Morais\nTécnico de som: Guilherme Nogueira\nMontagem: Thomaz Magalhães\nMaquiagem: Ana Simiema\nEdição e mixagem de som: Thaís Oliveira\n1ª assistência de direção: Flávia Ferreira\nContinuísta: Victor Vinícius\nAssistência de produção executiva: Rafael Henrique\nAssistência administrativa da Estratosfilmes: Nivia Neves\nProdução de elenco: Taynara Ferreira\n1ª assistência de produção: Jade Medeiros\n2ª assistência de produção: Milena Ribeiro\n1ª assistência de câmera: Leo Rocha\n2ª assistência de câmera: Matheus Medeiros\n1ª assistência de arte: Taynara Ferreira\n2ª assistência de arte: Thalita Goulart\nMicrofonistas: Elder Patrick e Larissa Fernandes\nMaking of: Rayane Richele\nColor grading: Antônio H. Queiroz\nMaquinista e eletricista-chefe: Tothi Cardoso\nMaquinista e eletricista: Pedrinho Fiel\nAssistência de maquinaria e elétrica: Gleig de Sousa\nIdentidade visual: Gabriel Newton\nPrestação de contas: Cecília Brito\nDistribuição para festivais: Érico José\nCozinha: Edna Benetti, Eduardo Benetti e Thiago Benetti\n\nProdução: Estratosfilmes e Setup Filmes",
-      "assistir": [],
+      "ficha": "Elenco\nJúlia: Shayene Karla\nLaura: Juliana Alburquerque\n\nFicha técnica\nDireção e roteiro: Gabriel Newton\nProdução executiva: Micael Bispo\nDireção de produção: Tamara Benetti\nDireção de fotografia: Antônio H. Queiroz\nDireção de arte: Wilma Morais\nTécnico de som: Guilherme Nogueira\nMontagem: Thomaz Magalhães\nMaquiagem: Ana Simiema\nEdição e mixagem de som: Thaís Oliveira\n1ª assistência de direção: Flávia Ferreira\nContinuísta: Victor Vinícius\nAssistência de produção executiva: Rafael Henrique\nAssistência administrativa da Estratosfilmes: Nivia Neves\nProdução de elenco: Taynara Ferreira\n1ª assistência de produção: Jade Medeiros\n2ª assistência de produção: Milena Ribeiro\n1ª assistência de câmera: Leo Rocha\n2ª assistência de câmera: Matheus Medeiros\n1ª assistência de arte: Taynara Ferreira\n2ª assistência de arte: Thalita Goulart\nMicrofonistas: Elder Patrick e Larissa Fernandes\nMaking of: Rayane Richele\nColor grading: Antônio H. Queiroz\nMaquinista e eletricista-chefe: Tothi Cardoso\nMaquinista e eletricista: Pedrinho Fiel\nAssistência de maquinaria e elétrica: Gleig de Sousa\nIdentidade visual: Gabriel Newton\nPrestação de contas: Cecília Brito\nDistribuição para festivais: Érico José\nCozinha: Edna Benetti, Eduardo Benetti e Thiago Benetti\n\nProdução: \nEstratosfilmes e Setup Filmes\n\nComercialização / financiamento\nAprovado na Lei Goyazes de 2015.",
+      "assistir": [
+        {
+          "titulo": "Facebook",
+          "link": "https://www.facebook.com/MeBalanceSuavementeMeBalanceAgora/"
+        }
+      ],
       "festivais": [
         {
           "nome": "10º Lobo Fest",
@@ -75,7 +99,33 @@
           "info": "Melhor Filme Goiano e Melhor Roteiro"
         }
       ],
-      "gallery": [],
+      "gallery": [
+        "/assets/uploads/1167_1.jpg",
+        "/assets/uploads/Screenshot_3.png",
+        "/assets/uploads/Screenshot_2.png",
+        "/assets/uploads/MG_9303-scaled.jpg"
+      ],
+      "trailer": "https://www.youtube.com/watch?v=XIB8AyO0PCE"
+    },
+    {
+      "title": "Um Garoto Chamado Suzy",
+      "poster": "/assets/uploads/Cartaz-A3-scaled.png",
+      "slate": "Curta-metragem / 2017",
+      "status": "Em distribuição",
+      "synopsis": "Suzy é um cara durão, mas precisa encontrar o homem que lhe deu esse nome.",
+      "ficha": "Elenco\nSuzy — Allan Santana\nPai — Liomar Veloso\nMãe — Rita Alves\nCantora — Letícia Lyns\nJosé — Rodrigo Jubé\nSeu Mário — Rubens Lázaro\nHomem de Preto — Boanerges Filho\nFabiana — Nivia Neves\nMulher do Quarto — Camila Borges\nAtendente do Cartório — Elinaldo Afonso\n\nFicha Técnica\nRoteiro: Jessica Gregorio, Gabriel Newton, Wilma Morais e Felipe Souza\nDireção: Gabriel Newton e Felipe Souza\nProdução Executiva: Micael Bispo\nDireção de Produção: Luana Otto\nDireção de Fotografia: Kaco Olímpio\nDireção de Arte: Wilma Morais\nTécnica de Som: Guilherme Nogueira\nMontagem: Thomaz Magalhães\n1º Assistente de Direção: Tothi Cardoso\n2º Assistente de Direção: Flávia Ferreira\nContinuísta: Flávia Ferreira\n1º Assistente de Câmera: Larry Sullivan\n2º Assistente de Câmera: Dan Pimentel\nLogger: Dan Pimentel\nMaquinista Chefe: Chico Macêdo\nEletricista Chefe: Elinaldo Afonso (\"Revinho\")\nAssistente de Maquinaria: Pedrinho (\"Calibre\")\nAssistente de Elétrica: Rodrigo (\"Fininho\")\nProdução de Arte: Débora Corrêa\nAssistente de Arte: Carol Matos\nFigurino: Carol Breviglieri\nCabelo e Maquiagem: Ana Simiema\nAssistente de Figurino: Dan Lemos\nAssistente de Maquiagem: Paloma Santos\nEstagiária de Produção e Maquiagem: Roberta de Andrade\nPós de Som: Guilherme Nogueira\nMicrofonista: Nara Sodré\nPlatô: Bruno Garajau\nAssistente de Produção Executiva: Rafael Henrique\nAssistente de Produção: Larissa Bueno\nAssistente de Produção: Raquel Otto\nProdutora de Elenco: Taynara Borges\nProdutora de Locação: Renata Garcia\nMaking Of: Thais Robaina\nStill: Vitória Melo\nCatering: Inêz Gonçalves\nContrarregra: Matheus Medeiros\nIdentidade Visual: Gabriel Godinho\nMotorista do Caminhão: Otthon\nMotorista da Van: Willian Teixeira\nChefe de Segurança: Adriano\nPintor: Eduardo\n\nCaptação de Recursos: Arte Brasil e Bridge Eventos",
+      "assistir": [],
+      "festivais": [],
+      "gallery": [
+        "/assets/uploads/Suzy-5.jpg",
+        "/assets/uploads/DSC9307.jpg",
+        "/assets/uploads/Suzy-2.jpg",
+        "/assets/uploads/Suzy-3.jpg",
+        "/assets/uploads/Suzy-4.jpg",
+        "/assets/uploads/equipeSUZY2.jpg",
+        "/assets/uploads/123456.jpg",
+        "/assets/uploads/suzy.jpg"
+      ],
       "trailer": ""
     }
   ]
