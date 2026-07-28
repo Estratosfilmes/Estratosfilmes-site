@@ -280,14 +280,29 @@
     },
     {
       "title": "Os Filmes de Cada Um",
-      "poster": "",
-      "slate": "",
+      "poster": "/assets/uploads/OS FILMES DE CADA UM _ CARTAZ.png",
+      "slate": "Curta-metragem Documental / 2025",
+      "status": "Em distribuição",
+      "synopsis": "Um documentário sobre o cinema produzido em Goiás a partir da perspectiva de diferentes realizadores. O filme reúne depoimentos que revelam como cada cineasta constrói sua relação com o audiovisual, suas referências, desafios e processos criativos, compondo um retrato coletivo da produção cinematográfica goiana.",
+      "ficha": "",
+      "assistir": [],
+      "festivais": [],
+      "gallery": [],
+      "trailer": ""
+    },
+    {
+      "title": "Pontos Finais",
+      "poster": "/assets/uploads/Still 2025-08-16 184212_1.25.2.jpg",
+      "slate": "Série /",
       "status": "",
       "synopsis": "",
       "ficha": "",
       "assistir": [],
       "festivais": [],
-      "gallery": [],
+      "gallery": [
+        "/assets/uploads/Still 2025-08-12 202230_1.59.1.jpg",
+        "/assets/uploads/Still 2025-08-12 201341_1.31.1.jpg"
+      ],
       "trailer": ""
     }
   ]
