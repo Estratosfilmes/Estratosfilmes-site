@@ -8,7 +8,12 @@
       "synopsis": "Vó Amélia, uma mulher negra criada em Goiás, cresceu ouvindo promessas de\num futuro repleto de carros voadores e viagens à lua. No entanto, viu essas\nexpectativas serem ofuscadas por uma geração obcecada por telas de celular.",
       "ficha": "",
       "assistir": [],
-      "festivais": [],
+      "festivais": [
+        {
+          "nome": "8º Icumam Lab / 2024",
+          "info": "8o Icumam Lab - Laboratório de Desenvolvimento de Projetos Audiovisuais longa-metragem e séries de TV do Centro-Oeste"
+        }
+      ],
       "gallery": [],
       "trailer": ""
     },
@@ -46,11 +51,20 @@
     {
       "title": "Sal a Gosto",
       "poster": "/assets/uploads/Cartaz Feed Instagram.png",
-      "slate": "Série de Ficção - 10 episódios",
+      "slate": "Série de Ficção - 10 episódios / 2024",
       "status": "Em Exibição (TV Brasil/TV UFG)",
-      "synopsis": "",
+      "synopsis": "Sal a Gosto é uma série de ficção com dez episódios de vinte e seis minutos onde\nacompanhamos a história da família Freitas: Tânia, Rogério, Laís e Alisson. Essa\nfamília negra de periferia tira seu sustento do restaurante montado na área da casa.\nPlanejando passar a virada do ano de 2019 para 2020 em Goiânia, Laís não esperava\nenfrentar a falência do restaurante, o divórcio dos pais, a possível chegada inesperada\nde um sobrinho e a pandemia do novo coronavírus. Em meio a tantos desafios,\napenas a união será capaz de ajudar essa família a superar as adversidades da vida.",
       "ficha": "",
-      "trailer": ""
+      "gallery": [
+        "/assets/uploads/SAG_EP01_VS3.01_46_13_04.Still042.jpg",
+        "/assets/uploads/_1010489.jpg",
+        "/assets/uploads/1010123-scaled.jpg",
+        "/assets/uploads/1010158-scaled.jpg",
+        "/assets/uploads/1010431-scaled.jpg",
+        "/assets/uploads/1010875-scaled.jpg",
+        "/assets/uploads/1010899-scaled.jpg"
+      ],
+      "trailer": "https://youtu.be/YymuFxtRrfI?si=c06e8MiCoRFDsj0w"
     },
     {
       "title": "Dias de Luta",
