@@ -124,7 +124,8 @@
         "/assets/uploads/Suzy-4.jpg",
         "/assets/uploads/suzy.jpg",
         "/assets/uploads/123456.jpg",
-        "/assets/uploads/equipeSUZY2.jpg"
+        "/assets/uploads/equipeSUZY2.jpg",
+        "/assets/uploads/ABOYNAMEDSUE.jpg"
       ],
       "trailer": ""
     },
@@ -141,13 +142,25 @@
         "/assets/uploads/QVEA-2-1.jpg",
         "/assets/uploads/QVEA-1.jpg",
         "/assets/uploads/IMG_0166.jpg",
-        "/assets/uploads/QVEA-7-1.jpg",
-        "/assets/uploads/qvea.jpg"
+        "/assets/uploads/qvea.jpg",
+        "/assets/uploads/QVEA-7-1.jpg"
       ],
       "trailer": ""
     },
     {
       "title": "Horizontes",
+      "poster": "/assets/uploads/Cartaz-Horizontes-internet.png",
+      "slate": "",
+      "status": "",
+      "synopsis": "",
+      "ficha": "",
+      "assistir": [],
+      "festivais": [],
+      "gallery": [],
+      "trailer": ""
+    },
+    {
+      "title": "Maria Mole",
       "poster": "",
       "slate": "",
       "status": "",
