@@ -192,14 +192,31 @@
     },
     {
       "title": "Maria Mole",
-      "poster": "",
-      "slate": "",
-      "status": "",
-      "synopsis": "",
-      "ficha": "",
+      "poster": "/assets/uploads/Maria-Mole-Cartaz-scaled.png",
+      "slate": "Curta-metragem / 2014",
+      "status": "Em distribuição",
+      "synopsis": "Maria vai longe para comprar o doce de que tanto gosta. Em mais uma tarde que parecia comum, ela enfrentará o mundo cruel que ainda não conhece.",
+      "ficha": "Direção  — Gabriel Newton\nRoteiro — Gabriel Newton\n\nProdução\nEstratosfilmes\nAgnosia Filmes\nDisfarce: Arte Cinematográfica\n\nGênero — Ficção\nDuração — 3 minutos\nAno — 2014\nClassificação Indicativa — 10 anos\n\nElenco\nShayene Karla\nThiago Candido\n\nFicha Técnica\nDireção, Roteiro, Fotografia, Edição e Finalização — Gabriel Newton\nDireção de Arte e Produção — Wilma Morais\nAssistente de Direção e Som Direto — Matheus Medeiros\nAssistente de Arte — Andreia Rios\n\nFinanciamento\nEstratosfilmes\nAgnosia Filmes\nDisfarce: Arte Cinematográfica",
       "assistir": [],
-      "festivais": [],
-      "gallery": [],
+      "festivais": [
+        {
+          "nome": "VI Mostra Audiovisual UEG",
+          "info": "Premiações 🏆 Melhor Vídeo — VI Mostra Audiovisual UEG"
+        },
+        {
+          "nome": "II FAVERA – Festival Audiovisual Vera Cruz",
+          "info": "Premiações 🏆 Melhor Roteiro — II FAVERA – Festival Audiovisual Vera Cruz"
+        },
+        {
+          "nome": "II FAVERA – Festival Audiovisual Vera Cruz",
+          "info": "Premiações🏆 Melhor Atriz (Shayene Karla) — II FAVERA – Festival Audiovisual Vera Cruz"
+        }
+      ],
+      "gallery": [
+        "/assets/uploads/Maria-Mole-Still-1.jpg",
+        "/assets/uploads/Maria-Mole-Still-3.png",
+        "/assets/uploads/Maria-Mole-Still-2.jpg"
+      ],
       "trailer": ""
     }
   ]
