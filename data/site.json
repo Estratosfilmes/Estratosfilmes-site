@@ -1,7 +1,10 @@
 {
   "logo": "/assets/uploads/Logo colorida (aplicação principal).png",
   "logo_size": 110,
-  "tagline": "Toda história tem camadas.",
+  "hero_mode": "none",
+  "hero_images": [],
+  "hero_video": "/assets/uploads/1167_1.jpg",
+  "tagline": "Pra ser bom na frente e atrás das câmeras",
   "lede": "Cinema feito no interior do Brasil. Ficção e documentário, do roteiro à pós-produção, com raiz em Goiás.",
   "email": "contato@estratosfilmes.com",
   "phone": "(62) 98641-9141",
