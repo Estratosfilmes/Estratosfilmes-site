@@ -24,13 +24,13 @@ collections:
         file: "data/site.json"
         fields:
           - { name: logo, label: "Logo (PNG com fundo transparente)", widget: image, required: false }
-          - { name: logo_size, label: "Tamanho da logo (altura em pixels)", widget: number, required: false, default: 50, value_type: int, min: 28, max: 110, hint: "Padrão 50. Aumente para deixar a logo maior." }
+          - { name: logo_size, label: "Tamanho da logo (altura em pixels)", widget: number, required: false, default: 50, value_type: int, min: 28, max: 200, hint: "Padrão 50. Aumente para deixar a logo maior (vai até 200)." }
           - name: hero_mode
             label: "Fundo da página inicial"
             widget: select
             default: "none"
             options:
-              - { label: "Fundo escuro (padrão)", value: "none" }
+              - { label: "Fundo claro (padrão)", value: "none" }
               - { label: "Slideshow de frames", value: "slideshow" }
               - { label: "Vídeo de fundo", value: "video" }
           - name: hero_images
