@@ -1,9 +1,9 @@
 {
   "logo": "/assets/uploads/Logo colorida (aplicação principal).png",
   "logo_size": 110,
-  "hero_mode": "video",
+  "hero_mode": "slideshow",
   "hero_images": [],
-  "hero_video": "/assets/uploads/LNJ - 5 min.mov",
+  "hero_video": "",
   "tagline": "Pra ser bom na frente e atrás das câmeras",
   "lede": "Cinema feito no interior do Brasil. Ficção e documentário, do roteiro à pós-produção, com raiz em Goiás.",
   "email": "contato@estratosfilmes.com",
